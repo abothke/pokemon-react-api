@@ -1,20 +1,18 @@
 import React, { useContext } from 'react'
-
 import { mainContext } from '../../assets/context/mainProvider'
-import Card from '../productCard/ProductCard'
-
+import Card from '../card/Card'
 const List = () => {
 
-    const { datas } = useContext(mainContext)
+    const { pokemons } = useContext(mainContext)
 
-    console.log("datas vom List", typeof datas);
+    console.log("datas vom List", typeof pokemons);
 
     return (
         <>
             <div>List</div>
 
             <main>
-                {datas.map((data, index) => {
+                {pokemons.map((data, index) => {
                     return (
                         <div key={index}>
                             <Card
