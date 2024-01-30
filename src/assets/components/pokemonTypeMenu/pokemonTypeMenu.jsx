@@ -27,11 +27,7 @@ const PokemonTypeMenu = () => {
     <>
         <div className="pokemonTypeMenu">
             <div className="pokemonTypeMenu__wrapper">
-                <div className="pokemonTypeMenu__wrapper__title">
-                    <h2>Typen</h2>
-                </div>
-                <div className="pokemonTypeMenu__wrapper__content">
-                    <div className="pokemonTypeMenu__wrapper__content__buttons">
+                    <div className="pokemonTypeMenu__wrapper__buttons">
                         {pokemonTypes.map((type, index) => {
                             return (
                                 // <Link to={`/type/${type.name}`} key={index}>
@@ -39,7 +35,6 @@ const PokemonTypeMenu = () => {
                                 // </Link>
                             )
                         })}
-                    </div>
                 </div>
             </div>
         </div>
