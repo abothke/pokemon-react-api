@@ -6,7 +6,7 @@ const Card = ({ data }) => {
     // console.log(data);
     return (
         <>
-            <h2>Title{data.name}</h2>
+            <h2>Name{data.name}</h2>
             
             <Link to={`/List/${data.id}`}><button>Read More</button></Link>
         </>
