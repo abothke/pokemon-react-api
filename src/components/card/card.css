@@ -14,7 +14,7 @@ main {
 #sec {
     display: flex;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
     min-width: 300px;
     border-radius: 20px;
     background: var(--Cards-Light-Mode, linear-gradient(52deg, #FFE1C6 4.87%, #FFCB05 94.37%));
