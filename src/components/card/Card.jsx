@@ -11,24 +11,24 @@ const Card = ({ data }) => {
     const formattedId = `#${pokemonId.padStart(3, '0')}`;
 
     // Generiere die URL für das Bild basierend auf der Pokémon-ID
-    const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemonId}.png`;
+    const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/${pokemonId}.gif`;
     return (
         <>
         { data ?(
-            <Link to={`/pokemon/${pokemonId}`}>
+            <Link to={`/pokemon/${pokemonId}`} className='pokemonCard'>
 
                 <section id='sec' >
                     <div id='div1'>
-                        <img id='img' src={imageUrl} alt={`Sprite of ${data.name}`} />
+                        <img className='pokemonIMG' src={imageUrl} alt={`Sprite of ${data.name}`} />
                     </div>
                     <div id='div2'>
-                        <h2>{formattedId}</h2>
+                        <h4>{formattedId}</h4>
                         { data.pokemon ?(
-                        <h2>{data?.pokemon.name}</h2>
+                        <h4>{data?.pokemon.name}</h4>
                         )
                         :
                         (
-                        <h2>{data?.name}</h2>
+                        <h4>{data?.name}</h4>
                         )
                         }
                         
