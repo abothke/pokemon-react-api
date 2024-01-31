@@ -1,16 +1,20 @@
+
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import DetailPage from './pages/detailPage/DetailPage'
+import { Route, Routes } from 'react-router-dom'
+import List from './components/list/List'
+import PokemonTypeMenu from './assets/components/pokemonTypeMenu/pokemonTypeMenu';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <DetailPage />
-
+      <PokemonTypeMenu />
+      <Routes>
+        {/* <Route path='/' element={<Home />} /> */}
+        <Route path='/' element={<List />} />
+      </Routes>
     </>
   )
 }
