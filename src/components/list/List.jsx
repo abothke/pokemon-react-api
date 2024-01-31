@@ -28,10 +28,17 @@ const List = () => {
                         </div>
                     )
                 })}
-                <button onClick={() => {
-                    setApiLimit(apiLimit + 100)
-                    console.log(apiLimit);
-                    }}>Load more</button>
+                { pokemons.length === apiLimit ? (
+                    <button onClick={() => {
+                        setApiLimit(apiLimit + 100)
+                        console.log(apiLimit);
+                        }}>Load more</button>
+                )
+                :
+                (
+                    null
+                )}
+                
             </main>
         </>
     )
