@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './card.css'
 
 const Card = ({ data }) => {
@@ -14,8 +14,9 @@ const Card = ({ data }) => {
 
     return (
         <>
-            <main>
-                <section id='sec'>
+            <Link to={`/pokemon/${pokemonId}`}>
+           
+                <section id='sec' >
 
                     <div id='div1'>
                         <img id='img' src={imageUrl} alt={`Sprite of ${data.name}`} />
@@ -25,7 +26,7 @@ const Card = ({ data }) => {
                         <h2>{data.name}</h2>
                     </div>
                 </section>
-            </main>
+             </Link>
 
 
         </>
