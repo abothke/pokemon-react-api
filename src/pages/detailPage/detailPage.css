@@ -1,0 +1,12 @@
+.detailContainer {
+    position: relative;
+    border-radius: 2rem;
+    height: 100%;
+}
+
+.detailContainer .imageBgd {
+    background: linear-gradient(#FFCB05, #FFE1C6);
+    width: 100%;
+    height: 50%;
+    border-radius: 2rem;
+}
