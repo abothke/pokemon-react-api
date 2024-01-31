@@ -1,0 +1,33 @@
+.detailContainer {
+    position: relative;
+    border-radius: 2rem;
+    height: 100%;
+}
+
+.detailContainer .imageBgd {
+    background: linear-gradient(#FFCB05, #FFE1C6);
+    width: 100%;
+    height: 50%;
+    border-radius: 2rem;
+}
+
+.attacks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        cursor: pointer;
+    }
+}
+
+.attacks ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+}
+.attack{
+    list-style: none;
+}
