@@ -2,9 +2,10 @@
 // Inhalt für Burgermenu um nach Pokemontypen zu suchen. Typen sind in pokemonTypes als Array gespeichert. Buttons werden anhand des Arrays generiert
 
 import { useContext, useEffect, useState } from "react";
-import { mainContext } from "../../context/mainProvider";
-import { Link } from "react-router-dom";
+import { mainContext } from "../../assets/context/mainProvider";
 import axios from "axios";
+import { slide as Menu } from 'react-burger-menu'
+import "./pokemonTypeMenu.css"
 
 const PokemonTypeMenu = () => {
     const { pokemonTypes, setPokemonTypes, pokemons, setPokemons } = useContext(mainContext)
@@ -25,7 +26,7 @@ const PokemonTypeMenu = () => {
 
   return (
     <>
-        <div className="pokemonTypeMenu">
+        <Menu className="pokemonTypeMenu">
             <div className="pokemonTypeMenu__wrapper">
                     <div className="pokemonTypeMenu__wrapper__buttons">
                         {pokemonTypes.map((type, index) => {
@@ -35,7 +36,7 @@ const PokemonTypeMenu = () => {
                         })}
                 </div>
             </div>
-        </div>
+        </Menu>
     </>
   );
 };

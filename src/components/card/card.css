@@ -1,71 +1,58 @@
-@font-face {
-    font-family: 'Roboto';
-    src: url(../../assets/fonts/Roboto/Roboto-Regular.ttf);
-}
-
-
 main {
     /* width: 375px;
     height: 1085px;
     border-radius: 30px;
     background: var(--FLYING, #CCDADD); */
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 1em;
 
 }
 
 #sec {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    width: 158px;
-    height: 120px;
-    flex-shrink: 0;
+    justify-content: center
+    min-width: 300px;
     border-radius: 20px;
-    /* 
-    animation-timing-function: ease-in;
-    animation-duration: 300ms; */
-
     background: var(--Cards-Light-Mode, linear-gradient(52deg, #FFE1C6 4.87%, #FFCB05 94.37%));
 }
 
 #div1 {
-    width: 178px;
-    height: 120px;
     flex-shrink: 0;
     border-radius: 10px 20px 0px 30px;
-    background: var(--Cards-Light-Mode, linear-gradient(52deg, #FFE1C6 4.87%, #FFCB05 94.37%));
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    min-width: 300px;
+    min-height: 300px;
 }
 
 #div2 {
     display: flex;
-    width: 158px;
-    height: 28px;
+    height: 20%;
+    width: 100%;
     padding: 5px 10px;
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
     border-radius: 0px 0px 20px 20px;
     background: #FFF;
+    gap: 1em;
 }
 
-img {
-    width: 164.662px;
-    height: 194px;
+.pokemonIMG {
+    width: 90%;
+    object-fit: contain;
+    max-height: 200px;
     flex-shrink: 0;
-    margin-bottom: 10px;
-    margin-top: -80px;
+    overflow: hidden;
+    padding: 1em;
 }
 
-h2 {
+h4 {
     color: var(--Background-Dark-Mode, #000);
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
 }

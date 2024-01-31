@@ -3,46 +3,52 @@ import { mainContext } from "../../assets/context/mainProvider";
 import { useEffect } from "react";
 import { useState } from "react";
 import "../detailPage/DetailPage.css"
+import { useParams } from "react-router-dom";
 
 
 const DetailPage = () => {
-
+    let { id } = useParams()
     const { pokemonId, setPokemonId, pokemon, setPokemon } = useContext(mainContext)
-
-
+    setPokemonId(id)
+    console.log(pokemon);
+    const [hidden, setHidden] = useState(true);
     // const {pokomenId} = useParams() hier werder die params geholt aus der url
     // setPokemonId(pokomenId) hier wird die id gesetzt
 
 
 
-    const idButton = () => {
-        setPokemonId(1)
-        console.log("hei hier", pokemonId);
-        console.log("hei pokemon", pokemon);
-        console.log("type", pokemon?.types[0]?.type?.name);
-
-    }
-
 
 
     return (<>
-        <h1>DetailPage</h1>
-        <button onClick={() => idButton()}>text</button>
-
         {
 
             pokemon ? (
                 <div className="detailContainer">
 
-                    <div className="imageBgd"><img src={pokemon?.sprites?.other?.home?.front_default} alt={pokemon.name} /></div>
+                    <div className="imageBgd"><img src={pokemon?.sprites?.other?.showdown?.front_default} alt={pokemon.name} /></div>
                     <h1>#{pokemon?.id} {pokemon?.name}</h1>
 
                     {/* hier mache ich die powers aber bin noch nicht fertig */}
-                    {/* <div className="powers">
-                        {pokemon.types.map((powers, index) => (
+                    <div className="powers">
+                        {pokemon?.types?.map((powers, index) => (
                             <button key={index}>{powers.type.name}</button>
                         ))}
-                    </div> */}
+                    </div>
+                    <div className="attacks">
+                            <h2 onClick={() => {
+                            setHidden(!hidden)
+                            }}>Attacks and Movements</h2>
+                            { hidden === false ? (
+                                                           <ul>
+                                                           {pokemon?.moves?.map((move, index) => (
+                                                           <li className="attack" key={index}>{move.move.name}</li>
+                                                           ))}
+                                                           </ul> 
+                            ) : (
+                                null
+                            ) }
+
+                    </div>
                 </div>
             )
                 :

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { mainContext } from '../../assets/context/mainProvider'
 import Card from '../card/Card'
+import './list.css'
 const List = () => {
 
     const { pokemons } = useContext(mainContext)
@@ -10,21 +11,17 @@ const List = () => {
     console.log(pokemons[0]);
     return (
         <>
-            <div>List</div>
-
             <main>
-            <h2>
                 {pokemons[0] === undefined ? (
-                    <p>Pokemon not found</p>
+                    <h2>Pokemon not found</h2>
                 )
             :
             (
                 null
             )}
-            </h2>
                 {pokemons.map((data, index) => {
                     return (
-                        <div key={index}>
+                        <div className='pokemonWrapper' key={index}>
                             <Card
                                 data={data}
                             />
