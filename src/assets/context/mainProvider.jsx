@@ -35,14 +35,15 @@ const MainProvider = ({ children }) => {
     useEffect(() => {
         const getPokemon = async () => {
             const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`);
-            setPokemon(res.data.results);
+            setPokemon(res.data);
+            console.log("hie res data", res.data);
         };
         { pokemonId ? getPokemon() : null }
     }, [pokemonId]);
 
     // Fetch der Typen der Pokemons um in PokemonTypes zu setzen als Array.
-    
-    useEffect (() => {
+
+    useEffect(() => {
         const getPokemonTypes = async () => {
             const res = await axios.get("https://pokeapi.co/api/v2/type/")
             setPokemonTypes(res.data.results)
@@ -52,13 +53,13 @@ const MainProvider = ({ children }) => {
 
     console.log(pokemonTypes);
 
-  return (
-    <>
-    <mainContext.Provider value={{ pokemons, setPokemons, pokemon, setPokemon, pokemonType, setPokemonType, pokemonTypes, setPokemonTypes, pokemonId, setPokemonId, searchTerm, setSearchTerm, darkmode, setDarkmode }}>
-      {children}
-    </mainContext.Provider>
-    </>
-  )
+    return (
+        <>
+            <mainContext.Provider value={{ pokemons, setPokemons, pokemon, setPokemon, pokemonType, setPokemonType, pokemonTypes, setPokemonTypes, pokemonId, setPokemonId, searchTerm, setSearchTerm, darkmode, setDarkmode }}>
+                {children}
+            </mainContext.Provider>
+        </>
+    )
 }
 
 export default MainProvider
