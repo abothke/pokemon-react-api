@@ -18,16 +18,19 @@ const MainProvider = ({ children }) => {
     const [pokemonId, setPokemonId] = useState(null)
     const [searchTerm, setSearchTerm] = useState("");
     const [darkmode, setDarkmode] = useState(false)
+    const [backupPokemons, setBackupPokemons] = useState([])
+    const [apiLimit, setApiLimit] = useState(151)
 
 
     // Fetch für die 151 Pokemon über die API
     useEffect(() => {
         const getPokemons = async () => {
-            const res = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=151");
+            const res = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${apiLimit}`);
             setPokemons(res.data.results);
+            setBackupPokemons(res.data.results)
         };
         getPokemons();
-    }, []);
+    }, [apiLimit]);
 
     console.log(pokemons);
 
@@ -55,7 +58,7 @@ const MainProvider = ({ children }) => {
 
     return (
         <>
-            <mainContext.Provider value={{ pokemons, setPokemons, pokemon, setPokemon, pokemonType, setPokemonType, pokemonTypes, setPokemonTypes, pokemonId, setPokemonId, searchTerm, setSearchTerm, darkmode, setDarkmode }}>
+            <mainContext.Provider value={{ pokemons, setPokemons, pokemon, setPokemon, backupPokemons, setBackupPokemons, pokemonType, setPokemonType, pokemonTypes, setPokemonTypes, pokemonId, setPokemonId, searchTerm, setSearchTerm, darkmode, setDarkmode, apiLimit, setApiLimit }}>
                 {children}
             </mainContext.Provider>
         </>
