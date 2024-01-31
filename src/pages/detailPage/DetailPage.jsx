@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { mainContext } from "../../assets/context/mainProvider";
 import { useEffect } from "react";
 import { useState } from "react";
-import "../detailPage/DetailPage.css"
+import "./detailPage.css"
 import { useParams } from "react-router-dom";
 
 
