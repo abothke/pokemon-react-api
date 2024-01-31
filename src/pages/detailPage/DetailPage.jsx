@@ -21,33 +21,33 @@ const DetailPage = () => {
         {
 
             pokemon ? (
-                // <main >
-                <div className="detailContainer">
-                    <div className="imageBgd"><img src={pokemon?.sprites?.other?.showdown?.front_default} alt={pokemon.name} /></div>
-                    <h1 className="title">{idMitNullen} {pokemon?.name}</h1>
+                <main className="framed">
+                    <div className="detailContainer">
+                        <div className="imageBgd"><img src={pokemon?.sprites?.other?.showdown?.front_default} alt={pokemon.name} /></div>
+                        <h1 className="title">{idMitNullen} {pokemon?.name}</h1>
 
-                    <div className="powers">
-                        {pokemon?.types?.map((powers, index) => (
-                            <p className={`color-${powers.type.name}`} key={index}>{powers.type.name}</p>
-                        ))}
-                    </div>
-                    <div className="attacks">
-                        <h2 onClick={() => {
-                            setHidden(!hidden)
-                        }}>Attacks and Movements</h2>
-                        {hidden === false ? (
-                            <ul>
-                                {pokemon?.moves?.map((move, index) => (
-                                    <li className="attack" key={index}>{move.move.name}</li>
-                                ))}
-                            </ul>
-                        ) : (
-                            null
-                        )}
+                        <div className="powers">
+                            {pokemon?.types?.map((powers, index) => (
+                                <p className={`color-${powers.type.name}`} key={index}>{powers.type.name}</p>
+                            ))}
+                        </div>
+                        <div className="attacks">
+                            <h3 onClick={() => {
+                                setHidden(!hidden)
+                            }}>Attacks and Movements</h3>
+                            {hidden === false ? (
+                                <ul className="framed">
+                                    {pokemon?.moves?.map((move, index) => (
+                                        <li className="attack" key={index}>{move.move.name}</li>
+                                    ))}
+                                </ul>
+                            ) : (
+                                null
+                            )}
 
+                        </div>
                     </div>
-                </div>
-                // </main>
+                </main>
             )
                 :
                 (
