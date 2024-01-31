@@ -10,15 +10,18 @@ const DetailPage = () => {
     const { pokemonId, setPokemonId, pokemon, setPokemon } = useContext(mainContext)
 
 
+    // const {pokomenId} = useParams() hier werder die params geholt aus der url
+    // setPokemonId(pokomenId) hier wird die id gesetzt
+
 
 
     const idButton = () => {
-        setPokemonId(144)
+        setPokemonId(1)
         console.log("hei hier", pokemonId);
         console.log("hei pokemon", pokemon);
+        console.log("type", pokemon?.types[0]?.type?.name);
 
     }
-
 
 
 
@@ -33,6 +36,13 @@ const DetailPage = () => {
 
                     <div className="imageBgd"><img src={pokemon?.sprites?.other?.home?.front_default} alt={pokemon.name} /></div>
                     <h1>#{pokemon?.id} {pokemon?.name}</h1>
+
+                    {/* hier mache ich die powers aber bin noch nicht fertig */}
+                    {/* <div className="powers">
+                        {pokemon.types.map((powers, index) => (
+                            <button key={index}>{powers.type.name}</button>
+                        ))}
+                    </div> */}
                 </div>
             )
                 :
