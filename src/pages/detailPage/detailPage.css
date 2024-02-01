@@ -177,9 +177,8 @@
         max-width: 20rem;
     }
 
-    /* hier sind die Bild settings */
     .detailContainer .imageBgd img {
-        width: 350px;
+        width: 170px;
         margin-top: 2.5em;
     }
 
