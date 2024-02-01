@@ -1,26 +1,152 @@
+/* hier ist detail container */
 .detailContainer {
-    position: relative;
-    border-radius: 2rem;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1em;
+    margin: 1rem;
+
 }
 
+/* hier ist ein div mit dem gradient und dem Bild */
 .detailContainer .imageBgd {
-    background: linear-gradient(#FFCB05, #FFE1C6);
-    width: 100%;
-    height: 50%;
-    border-radius: 2rem;
+    min-width: 500px;
+    min-height: 500px;
+    padding: 1rem;
+    border-radius: 20px;
+    background: linear-gradient(52deg, #FFE1C6 4.87%, #FFCB05 94.37%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.attacks{
+/* hier sind die Bild settings */
+.detailContainer .imageBgd img {
+    width: 350px;
+    height: auto;
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
+
+}
+
+
+/* hier sind setting for TYPE aka sein power */
+.powers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+}
+
+.powers p {
+    padding: 1rem 2.5rem;
+    border-radius: 20px;
+}
+
+
+
+/* hier sind die bgd color for jede power der type name bekommt man als classe in js */
+.color-normal {
+    background-color: #A8A878;
+}
+
+.color-fighting {
+    background-color: #C03028;
+}
+
+.color-flying {
+    background-color: #A890F0;
+}
+
+.color-poison {
+    background-color: #A040A0;
+}
+
+.color-ground {
+    background-color: #E0C068;
+}
+
+.color-fire {
+    background-color: #F08030;
+}
+
+.color-water {
+    background-color: #6890F0;
+}
+
+.color-electric {
+    background-color: #F8D030;
+}
+
+.color-psychic {
+    background-color: #F85888;
+}
+
+.color-ice {
+    background-color: #98D8D8;
+}
+
+.color-dragon {
+    background-color: #7038F8;
+}
+
+.color-dark {
+    background-color: #705848;
+}
+
+.color-fairy {
+    background-color: #EE99AC;
+}
+
+.color-unknown {
+    background-color: #68A090;
+}
+
+.color-shadow {
+    background-color: #000;
+}
+
+.color-grass {
+    background-color: #48D0B0;
+}
+
+.color-bug {
+    background-color: #A8B820;
+}
+
+.color-rock {
+    background-color: #B8A038;
+}
+
+.color-steel {
+    background-color: #B8B8D0;
+}
+
+.color-ghost {
+    background-color: #705898;
+}
+
+.color-none {
+    background-color: #68A090;
+}
+
+
+/* hier setting for attacs */
+
+.attacks {
     display: flex;
     flex-direction: column;
     align-items: center;
-    h2{
+    justify-content: center;
+    gap: 1em;
+
+    h2 {
         cursor: pointer;
     }
 }
 
-.attacks ul{
+.attacks ul {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
@@ -28,6 +154,10 @@
     align-items: center;
     justify-content: center;
 }
-.attack{
+
+.attack {
     list-style: none;
+    border: 1px solid #000;
+    padding: .8rem;
+    border-radius: 20px;
 }
