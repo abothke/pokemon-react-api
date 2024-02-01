@@ -40,9 +40,9 @@
   /* General sidebar styles */
   .bm-menu {
     background: #373a47;
-    padding: 2.5em 1.5em 0;
+    padding: 2.5em 1.5em;
     font-size: 1.15em;
-    width: 50vw
+    margin: 0;
   }
   
   /* Morph shape necessary with bubble or elastic */
@@ -59,7 +59,6 @@
   /* Individual item */
   .bm-item {
     display: inline-block;
-  
     color: #d1d1d1;
     margin-bottom: 10px;
     text-align: left;

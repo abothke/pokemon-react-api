@@ -26,16 +26,17 @@ const PokemonTypeMenu = () => {
 
   return (
     <>
-        <Menu className="pokemonTypeMenu">
-            <div className="pokemonTypeMenu__wrapper">
-                    <div className="pokemonTypeMenu__wrapper__buttons">
+        <Menu
+        isOpen={ false }
+        width={"30%"}
+        pageWrapId="page-wrap"
+        className="pokemonTypeMenu"
+        >
                         {pokemonTypes.map((type, index) => {
                             return (
-                                <button onClick={() => setPokemonType(type.name)} key={index}>{type.name}</button>
+                                <button className="menu-item" onClick={() => setPokemonType(type.name)} key={index}>{type.name}</button>
                                 )
                         })}
-                </div>
-            </div>
         </Menu>
     </>
   );
