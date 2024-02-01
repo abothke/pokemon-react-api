@@ -1,10 +1,11 @@
-header{
+header {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 1em;
     gap: 1em;
-    input{
+
+    input {
         text-align: center;
         text-transform: lowercase;
         background-color: white;
@@ -13,7 +14,41 @@ header{
         font-size: 2em;
         font-family: "Pokemon GB";
     }
-    img{
+
+    img {
         width: 500px;
     }
 }
+
+
+@media only screen and (max-width: 760px) {
+    header {
+        margin: 1em;
+        gap: 4em;
+    
+        input {
+            font-size: 1.2em;
+        }
+            img {
+            width: 250px;
+        }
+    }
+  
+  }
+  
+  /* @media only screen and (min-width: 761px) {
+    header {
+        margin: 1em;
+        gap: 4em;
+    
+        input {
+            font-size: 1.2em;
+        }
+            img {
+            width: 350px;
+        }
+    }
+  
+  
+  }
+   */
