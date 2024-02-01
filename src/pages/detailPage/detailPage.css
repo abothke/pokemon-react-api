@@ -174,7 +174,7 @@
     .detailContainer .imageBgd {
         min-height: 200px;
         padding: 1rem;
-        max-width: 10rem;
+        max-width: 12.5rem;
     }
 
     .detailContainer .imageBgd img {
@@ -193,19 +193,12 @@
 
 }
 
-/* @media only screen and (min-width: 761px) {
-    header {
-        margin: 1em;
-        gap: 4em;
-    
-        input {
-            font-size: 1.2em;
-        }
-            img {
-            width: 350px;
-        }
+@media only screen and (min-width: 761px) {
+    .detailContainer .imageBgd {
+        min-height: 200px;
+        padding: 1rem;
+        max-width: 35rem;
     }
   
-  
   }
-   */
+  
