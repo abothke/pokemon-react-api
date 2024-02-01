@@ -56,3 +56,34 @@ main {
 h4 {
     color: var(--Background-Dark-Mode, #000);
 }
+
+
+@media only screen and (max-width: 760px) {
+
+    
+   
+    #div1 {
+        min-height: 250px;
+    }
+    
+
+    
+    .pokemonIMG {
+        width: 60%;
+       }
+
+  
+  }
+  
+  /* @media only screen and (min-width: 761px) {
+    header {
+        margin: 1em;
+        gap: 4em;
+    
+        input {
+            font-size: 1.2em;
+        }
+            img {
+            width: 350px;
+        }
+    }
