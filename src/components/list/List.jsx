@@ -29,10 +29,12 @@ const List = () => {
                     )
                 })}
                 { pokemons.length === apiLimit ? (
+                    <div className='framed'>
                     <button onClick={() => {
                         setApiLimit(apiLimit + 100)
                         console.log(apiLimit);
                         }}>Load more</button>
+                        </div>
                 )
                 :
                 (

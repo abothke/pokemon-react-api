@@ -6,19 +6,17 @@
     padding: 1rem;
     gap: 1em;
     margin: 1rem;
-
 }
 
 /* hier ist ein div mit dem gradient und dem Bild */
 .detailContainer .imageBgd {
-    min-width: 500px;
     min-height: 500px;
     padding: 1rem;
     border-radius: 20px;
-    background: linear-gradient(52deg, #FFE1C6 4.87%, #FFCB05 94.37%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(52deg, #ffffff 4.87%, #FFFF04 94.37%);
+    margin: 0 auto;
+    width: 40rem;
+    max-width: 40rem;
 }
 
 /* hier sind die Bild settings */
@@ -27,9 +25,8 @@
     height: auto;
     object-fit: contain;
     aspect-ratio: 1 / 1;
-
+    margin-top: 5em;
 }
-
 
 /* hier sind setting for TYPE aka sein power */
 .powers {
@@ -37,6 +34,7 @@
     align-items: center;
     justify-content: center;
     gap: .5em;
+    
 }
 
 .powers p {
@@ -135,12 +133,10 @@
 /* hier setting for attacs */
 
 .attacks {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 1em;
-
+    width: 45rem;
+    max-width: 90%;
+    margin: 0 auto;
     h2 {
         cursor: pointer;
     }
@@ -153,6 +149,9 @@
     width: 80%;
     align-items: center;
     justify-content: center;
+    li{
+        list-style-type: none;
+    }
 }
 
 .attack {
@@ -160,4 +159,10 @@
     border: 1px solid #000;
     padding: .8rem;
     border-radius: 20px;
+}
+
+.framed{
+    max-width: 80vw;
+    width: 80vw;
+    margin: 0 auto;
 }
