@@ -15,7 +15,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 300px;
+    min-width: 200px;
     border-radius: 20px;
     background: linear-gradient(52deg, #ffffff 4.87%, #FFFF04 94.37%);
 }
@@ -63,13 +63,13 @@ h4 {
     
    
     #div1 {
-        min-height: 250px;
+        min-width: 250px;
+        min-height: 200px;
     }
-    
-
     
     .pokemonIMG {
         width: 60%;
+        min-height: 150px;
        }
 
   

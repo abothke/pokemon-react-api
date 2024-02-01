@@ -172,23 +172,23 @@
 @media only screen and (max-width: 760px) {
 
     .detailContainer .imageBgd {
-        min-height: 250px;
+        min-height: 200px;
         padding: 1rem;
-        max-width: 20rem;
+        max-width: 10rem;
     }
 
     .detailContainer .imageBgd img {
-        width: 170px;
+        width: 96px;
         margin-top: 2.5em;
     }
 
     .powers p {
-        padding: 0.7rem 1.2rem;
+        padding: 0.2rem 0.50rem;
         border-radius: 20px;
     }
 
     .attacks {
-        width: 25rem;
+        width: 20rem;
     }
 
 }
