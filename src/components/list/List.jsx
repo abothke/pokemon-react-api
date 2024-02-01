@@ -4,7 +4,7 @@ import Card from '../card/Card'
 import './list.css'
 const List = () => {
 
-    const { pokemons } = useContext(mainContext)
+    const { pokemons, apiLimit, setApiLimit } = useContext(mainContext)
 
     console.log("datas vom List", typeof pokemons);
     const pokemonObj = pokemons[0]?.pokemon ? "" : "Pokemon not found"
@@ -28,6 +28,19 @@ const List = () => {
                         </div>
                     )
                 })}
+                { pokemons.length === apiLimit ? (
+                    <div className='framed'>
+                    <button onClick={() => {
+                        setApiLimit(apiLimit + 100)
+                        console.log(apiLimit);
+                        }}>Load more</button>
+                        </div>
+                )
+                :
+                (
+                    null
+                )}
+                
             </main>
         </>
     )

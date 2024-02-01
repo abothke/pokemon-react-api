@@ -7,6 +7,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: 1em;
     gap: 1em;
 
 }
@@ -14,10 +15,10 @@ main {
 #sec {
     display: flex;
     flex-direction: column;
-    justify-content: center
-    min-width: 300px;
+    justify-content: center;
+    min-width: 200px;
     border-radius: 20px;
-    background: var(--Cards-Light-Mode, linear-gradient(52deg, #FFE1C6 4.87%, #FFCB05 94.37%));
+    background: linear-gradient(52deg, #ffffff 4.87%, #FFFF04 94.37%);
 }
 
 #div1 {
@@ -56,3 +57,34 @@ main {
 h4 {
     color: var(--Background-Dark-Mode, #000);
 }
+
+
+@media only screen and (max-width: 760px) {
+
+    
+   
+    #div1 {
+        min-width: 250px;
+        min-height: 200px;
+    }
+    
+    .pokemonIMG {
+        width: 60%;
+        min-height: 150px;
+       }
+
+  
+  }
+  
+  /* @media only screen and (min-width: 761px) {
+    header {
+        margin: 1em;
+        gap: 4em;
+    
+        input {
+            font-size: 1.2em;
+        }
+            img {
+            width: 350px;
+        }
+    }

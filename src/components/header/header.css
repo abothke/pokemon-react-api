@@ -1,0 +1,52 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+
+    input {
+        text-align: center;
+        text-transform: lowercase;
+        background-color: white;
+        color: black;
+        border: none;
+        font-size: 2em;
+        font-family: "Pokemon GB";
+    }
+
+    img {
+        width: 500px;
+    }
+}
+
+
+@media only screen and (max-width: 760px) {
+    header {
+        padding: 1em;
+        gap: 4em;
+        input {
+            font-size: 0.6em;
+        }
+            img {
+            width: 200px;
+        }
+    }
+  
+  }
+  
+  /* @media only screen and (min-width: 761px) {
+    header {
+        margin: 1em;
+        gap: 4em;
+    
+        input {
+            font-size: 1.2em;
+        }
+            img {
+            width: 350px;
+        }
+    }
+  
+  
+  }
+   */

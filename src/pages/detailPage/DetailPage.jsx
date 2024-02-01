@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import { mainContext } from "../../assets/context/mainProvider";
-import { useEffect } from "react";
 import { useState } from "react";
 import "./detailPage.css"
 import { useParams } from "react-router-dom";
+import Header from "../../components/header/Header";
+import ArrowToTop from "../../components/arrowToTop/ArrowToTop";
 
 
 const DetailPage = () => {
@@ -12,50 +13,53 @@ const DetailPage = () => {
     setPokemonId(id)
     console.log(pokemon);
     const [hidden, setHidden] = useState(true);
-    // const {pokomenId} = useParams() hier werder die params geholt aus der url
-    // setPokemonId(pokomenId) hier wird die id gesetzt
 
+    //falls id ist kleiner als 10 commt eine 0 vorne und acuh bei 100
+    const idMitNullen = `#${id.padStart(3, '0')}`
 
-
-
-
-    return (<>
+    return (
+    <>
+        <Header />
         {
-
             pokemon ? (
-                <div className="detailContainer">
+                <main className="framed">
+                    <div className="detailContainer">
+                        <div className="imageBgd"><img src={pokemon?.sprites?.other?.showdown?.front_default} alt={pokemon.name} /></div>
+                        <h1 className="title">{idMitNullen} {pokemon?.name}</h1>
 
-                    <div className="imageBgd"><img src={pokemon?.sprites?.other?.showdown?.front_default} alt={pokemon.name} /></div>
-                    <h1>#{pokemon?.id} {pokemon?.name}</h1>
-
-                    {/* hier mache ich die powers aber bin noch nicht fertig */}
-                    <div className="powers">
-                        {pokemon?.types?.map((powers, index) => (
-                            <button key={index}>{powers.type.name}</button>
-                        ))}
-                    </div>
-                    <div className="attacks">
-                            <h2 onClick={() => {
-                            setHidden(!hidden)
-                            }}>Attacks and Movements</h2>
-                            { hidden === false ? (
-                                                           <ul>
-                                                           {pokemon?.moves?.map((move, index) => (
-                                                           <li className="attack" key={index}>{move.move.name}</li>
-                                                           ))}
-                                                           </ul> 
+                        <div className="powers">
+                            {pokemon?.types?.map((powers, index) => (
+                                <p className={`color-${powers.type.name}`} key={index}>{powers.type.name}</p>
+                            ))}
+                        </div>
+                        <div className="attacks">
+                            <ul className="framed buttons">
+                                <li>
+                                    <button onClick={() => {
+                                        setHidden(!hidden)
+                                    }}>Attacks and Movements</button>
+                                </li>
+                            </ul>
+                            {hidden === false ? (
+                                <ul className="framed">
+                                    {pokemon?.moves?.map((move, index) => (
+                                        <li className="framed buttons" key={index}>{move.move.name}</li>
+                                    ))}
+                                </ul>
                             ) : (
                                 null
-                            ) }
+                            )}
 
+                        </div>
                     </div>
-                </div>
+                </main>
             )
                 :
                 (
-                    <p>...loading</p>
+                    < div className="detailContainer">
+                        <h4>... loading the pokomen <details></details></h4>
+                    </div>
                 )
-
         }
 
 
@@ -68,9 +72,9 @@ const DetailPage = () => {
                 </div>
                 : <p>...loading</p>
         } */}
-
-
-    </>);
+        <ArrowToTop />
+    </>
+    );
 }
 
 export default DetailPage;

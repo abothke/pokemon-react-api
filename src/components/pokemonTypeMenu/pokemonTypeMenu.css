@@ -40,9 +40,9 @@
   /* General sidebar styles */
   .bm-menu {
     background: #373a47;
-    padding: 2.5em 1.5em 0;
+    padding: 2.5em 1.5em;
     font-size: 1.15em;
-    width: 50vw
+    margin: 0;
   }
   
   /* Morph shape necessary with bubble or elastic */
@@ -59,7 +59,6 @@
   /* Individual item */
   .bm-item {
     display: inline-block;
-  
     color: #d1d1d1;
     margin-bottom: 10px;
     text-align: left;
@@ -75,3 +74,37 @@
   .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
   }
+
+  @media only screen and (max-width: 760px) {
+/* Position and sizing of burger button */
+.bm-burger-button {
+  width: 21px;
+  height: 15px;
+  left: 13px;
+  top: 15px;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  font-size: 0.8em;
+  width: 11rem
+}
+  
+}
+
+/* @media only screen and (min-width: 761px) {
+    header {
+        margin: 1em;
+        gap: 4em;
+    
+        input {
+            font-size: 1.2em;
+        }
+            img {
+            width: 350px;
+        }
+    }
+  
+  
+  }
+   */

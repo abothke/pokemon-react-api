@@ -1,33 +1,204 @@
+/* hier ist detail container */
 .detailContainer {
-    position: relative;
-    border-radius: 2rem;
-    height: 100%;
-}
-
-.detailContainer .imageBgd {
-    background: linear-gradient(#FFCB05, #FFE1C6);
-    width: 100%;
-    height: 50%;
-    border-radius: 2rem;
-}
-
-.attacks{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1em;
+    margin: 1rem;
+}
+
+/* hier ist ein div mit dem gradient und dem Bild */
+.detailContainer .imageBgd {
+    min-height: 500px;
+    padding: 1rem;
+    border-radius: 20px;
+    background: linear-gradient(52deg, #ffffff 4.87%, #FFFF04 94.37%);
+    margin: 0 auto;
+    width: 40rem;
+    max-width: 40rem;
+}
+
+/* hier sind die Bild settings */
+.detailContainer .imageBgd img {
+    width: 350px;
+    height: auto;
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
+    margin-top: 5em;
+}
+
+/* hier sind setting for TYPE aka sein power */
+.powers {
+    display: flex;
     align-items: center;
-    h2{
+    justify-content: center;
+    gap: .5em;
+
+}
+
+.powers p {
+    padding: 1rem 2.5rem;
+    border-radius: 20px;
+}
+
+
+
+/* hier sind die bgd color for jede power der type name bekommt man als classe in js */
+.color-normal {
+    background-color: #A8A878;
+}
+
+.color-fighting {
+    background-color: #C03028;
+}
+
+.color-flying {
+    background-color: #A890F0;
+}
+
+.color-poison {
+    background-color: #A040A0;
+}
+
+.color-ground {
+    background-color: #E0C068;
+}
+
+.color-fire {
+    background-color: #F08030;
+}
+
+.color-water {
+    background-color: #6890F0;
+}
+
+.color-electric {
+    background-color: #F8D030;
+}
+
+.color-psychic {
+    background-color: #F85888;
+}
+
+.color-ice {
+    background-color: #98D8D8;
+}
+
+.color-dragon {
+    background-color: #7038F8;
+}
+
+.color-dark {
+    background-color: #705848;
+}
+
+.color-fairy {
+    background-color: #EE99AC;
+}
+
+.color-unknown {
+    background-color: #68A090;
+}
+
+.color-shadow {
+    background-color: #000;
+}
+
+.color-grass {
+    background-color: #48D0B0;
+}
+
+.color-bug {
+    background-color: #A8B820;
+}
+
+.color-rock {
+    background-color: #B8A038;
+}
+
+.color-steel {
+    background-color: #B8B8D0;
+}
+
+.color-ghost {
+    background-color: #705898;
+}
+
+.color-none {
+    background-color: #68A090;
+}
+
+
+/* hier setting for attacs */
+
+.attacks {
+    gap: 1em;
+    width: 45rem;
+    max-width: 90%;
+    margin: 0 auto;
+
+    h2 {
         cursor: pointer;
     }
 }
 
-.attacks ul{
+.attacks ul {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
     width: 80%;
     align-items: center;
     justify-content: center;
+
+    li {
+        list-style-type: none;
+    }
 }
-.attack{
+
+.attack {
     list-style: none;
+    border: 1px solid #000;
+    padding: .8rem;
+    border-radius: 20px;
 }
+
+.framed {
+    max-width: 80vw;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 760px) {
+
+    .detailContainer .imageBgd {
+        min-height: 200px;
+        padding: 1rem;
+        max-width: 12.5rem;
+    }
+
+    .detailContainer .imageBgd img {
+        width: 96px;
+        margin-top: 2.5em;
+    }
+
+    .powers p {
+        padding: 0.2rem 0.35rem;
+        border-radius: 20px;
+    }
+
+    .attacks {
+        width: 20rem;
+    }
+
+}
+
+@media only screen and (min-width: 761px) {
+    .detailContainer .imageBgd {
+        min-height: 200px;
+        padding: 1rem;
+        max-width: 35rem;
+    }
+  
+  }
+  
