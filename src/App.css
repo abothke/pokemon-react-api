@@ -38,3 +38,23 @@
 .read-the-docs {
   color: #888;
 }
+
+.scroll-to-top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.scroll-to-top:hover::before {
+  color: #181010;
+  box-shadow: none }
+
+  .scroll-to-top{
+    font-family: "Pokemon GB";
+    font-size: 1em;
+    background: none;
+    border: none;
+    padding: 0 0 0 0;
+    text-transform: uppercase;
+    cursor: pointer; }

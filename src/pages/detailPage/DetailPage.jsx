@@ -3,7 +3,8 @@ import { mainContext } from "../../assets/context/mainProvider";
 import { useState } from "react";
 import "./detailPage.css"
 import { useParams } from "react-router-dom";
-import Heder from "../../components/header/Header";
+import Header from "../../components/header/Header";
+import ArrowToTop from "../../components/arrowToTop/ArrowToTop";
 
 
 const DetailPage = () => {
@@ -16,10 +17,10 @@ const DetailPage = () => {
     //falls id ist kleiner als 10 commt eine 0 vorne und acuh bei 100
     const idMitNullen = `#${id.padStart(3, '0')}`
 
-    return (<>
-        <Heder />
+    return (
+    <>
+        <Header />
         {
-
             pokemon ? (
                 <main className="framed">
                     <div className="detailContainer">
@@ -32,13 +33,17 @@ const DetailPage = () => {
                             ))}
                         </div>
                         <div className="attacks">
-                            <h3 onClick={() => {
-                                setHidden(!hidden)
-                            }}>Attacks and Movements</h3>
+                            <ul className="framed buttons">
+                                <li>
+                                    <button onClick={() => {
+                                        setHidden(!hidden)
+                                    }}>Attacks and Movements</button>
+                                </li>
+                            </ul>
                             {hidden === false ? (
                                 <ul className="framed">
                                     {pokemon?.moves?.map((move, index) => (
-                                        <li className="attack" key={index}>{move.move.name}</li>
+                                        <li className="framed buttons" key={index}>{move.move.name}</li>
                                     ))}
                                 </ul>
                             ) : (
@@ -54,9 +59,7 @@ const DetailPage = () => {
                     < div className="detailContainer">
                         <h4>... loading the pokomen <details></details></h4>
                     </div>
-
                 )
-
         }
 
 
@@ -69,9 +72,9 @@ const DetailPage = () => {
                 </div>
                 : <p>...loading</p>
         } */}
-
-
-    </>);
+        <ArrowToTop />
+    </>
+    );
 }
 
 export default DetailPage;

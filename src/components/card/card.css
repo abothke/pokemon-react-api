@@ -17,7 +17,7 @@ main {
     justify-content: center;
     min-width: 300px;
     border-radius: 20px;
-    background: var(--Cards-Light-Mode, linear-gradient(52deg, #FFE1C6 4.87%, #FFCB05 94.37%));
+    background: linear-gradient(52deg, #ffffff 4.87%, #FFFF04 94.37%);
 }
 
 #div1 {
