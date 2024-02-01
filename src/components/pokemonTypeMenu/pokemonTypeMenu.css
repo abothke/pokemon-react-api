@@ -74,3 +74,36 @@
   .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
   }
+
+  @media only screen and (max-width: 760px) {
+/* Position and sizing of burger button */
+.bm-burger-button {
+  width: 21px;
+  height: 15px;
+  left: 13px;
+  top: 15px;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  font-size: 0.8em;
+}
+  
+}
+
+/* @media only screen and (min-width: 761px) {
+    header {
+        margin: 1em;
+        gap: 4em;
+    
+        input {
+            font-size: 1.2em;
+        }
+            img {
+            width: 350px;
+        }
+    }
+  
+  
+  }
+   */
