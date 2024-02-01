@@ -4,7 +4,7 @@
 import { useContext, useEffect, useState } from "react";
 import { mainContext } from "../../assets/context/mainProvider";
 import axios from "axios";
-import { slide as Menu } from 'react-burger-menu'
+import { stack as Menu } from 'react-burger-menu'
 import "./pokemonTypeMenu.css"
 
 const PokemonTypeMenu = () => {
