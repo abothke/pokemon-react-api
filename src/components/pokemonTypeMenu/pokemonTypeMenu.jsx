@@ -8,10 +8,8 @@ import { stack as Menu } from 'react-burger-menu'
 import "./pokemonTypeMenu.css"
 
 const PokemonTypeMenu = () => {
-    const { pokemonTypes, setPokemonTypes, pokemons, setPokemons } = useContext(mainContext)
+    const { pokemonTypes, setPokemons } = useContext(mainContext)
     const [pokemonType, setPokemonType] = useState("");
-    console.log(pokemonTypes)
-    console.log(pokemons)
     // Nach Einträgen in pokemons suchen und mit dem Array pokemonTypes vergleichen. Wenn ein Eintrag in pokemons mit einem Eintrag in pokemonTypes übereinstimmt, dann wird dieser Eintrag in pokemonTypes angezeigt.
 
     useEffect(() => {

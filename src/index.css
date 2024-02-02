@@ -13,15 +13,15 @@
 [data-theme="light"] {
   --color-bg: #F8F3F8;
   --color-fg: #181010;
-  --frame-bg-hd: url("./images/frame-hd.png") 42 round;
-  --frame-bg: url("./images/frame.png") 7 round;
+  --frame-bg-hd: url("./assets/images/frame-hd.png") 42 round;
+  --frame-bg: url("./assets/images/frame.png") 7 round;
   }
 
 [data-theme="dark"] {
   --color-bg: #181010;
   --color-fg: #F8F3F8;
-  --frame-bg-hd: url("./images/frame-hd-dark.png") 42 round;
-  --frame-bg: url("./images/frame-dark.png") 7 round;
+  --frame-bg-hd: url("./assets/images/frame-hd-dark.png") 42 round;
+  --frame-bg: url("./assets/images/frame-dark.png") 7 round;
   --darkmode-icon: 
 }
 
