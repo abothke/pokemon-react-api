@@ -5,12 +5,16 @@ const Card = ({ data }) => {
     // Extrahiere die Pokémon-ID aus der URL, indem die URL in Segmente aufgeteilt wird und das zweite Segment von hinten verwendet wird
     const urlSegments = data.pokemon ? data.pokemon.url.split('/') : data.url.split('/')
     const pokemonId = urlSegments[urlSegments.length - 2];
+    console.log("halloamllo", data);
 
     // Formatierung der ID auf 3 Stellen mit führenden Nullen
     const formattedId = `#${pokemonId.padStart(3, '0')}`;
+    console.log(formattedId);
 
     // Generiere die URL für das Bild basierend auf der Pokémon-ID
-    const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/${pokemonId}.gif`;
+    const imageUrl = pokemonId.padStart(3, '0') >= 920 ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png` : `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/${pokemonId}.gif`
+
+
     return (
         <>
         {/* // Wenn die Daten vorhanden sind, zeige das Pokémon an, andernfalls zeige "Loading..." an */}
@@ -19,6 +23,7 @@ const Card = ({ data }) => {
 
                 <section id='sec' >
                     <div id='div1'>
+                        
                         <img className='pokemonIMG' src={imageUrl} alt={`Sprite of ${data.name}`} />
                     </div>
                     <div id='div2'>
