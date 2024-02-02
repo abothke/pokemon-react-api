@@ -26,7 +26,7 @@ const PokemonTypeMenu = () => {
     <>
         <Menu
         isOpen={ false }
-        width={"30%"}
+        width={"300px"}
         pageWrapId="page-wrap"
         className="pokemonTypeMenu"
         >
