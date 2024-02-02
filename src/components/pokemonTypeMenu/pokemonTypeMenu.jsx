@@ -32,7 +32,7 @@ const PokemonTypeMenu = () => {
         >
                         {pokemonTypes.map((type, index) => {
                             return (
-                                <button className="menu-item" onClick={() => setPokemonType(type.name)} key={index}>{type.name}</button>
+                                <button className="menu-item button" onClick={() => setPokemonType(type.name)} key={index}>{type.name}</button>
                                 )
                         })}
         </Menu>
