@@ -1,9 +1,8 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import './card.css'
 
 const Card = ({ data }) => {
-    // console.log(data);
+    // Extrahiere die Pokémon-ID aus der URL, indem die URL in Segmente aufgeteilt wird und das zweite Segment von hinten verwendet wird
     const urlSegments = data.pokemon ? data.pokemon.url.split('/') : data.url.split('/')
     const pokemonId = urlSegments[urlSegments.length - 2];
 
@@ -14,6 +13,7 @@ const Card = ({ data }) => {
     const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/${pokemonId}.gif`;
     return (
         <>
+        // Wenn die Daten vorhanden sind, zeige das Pokémon an, andernfalls zeige "Loading..." an
         { data ?(
             <Link to={`/pokemon/${pokemonId}`} className='pokemonCard'>
 
