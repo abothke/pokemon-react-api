@@ -9,7 +9,7 @@ import ArrowToTop from "../../components/arrowToTop/ArrowToTop";
 
 const DetailPage = () => {
     let { id } = useParams()
-    const { pokemonId, setPokemonId, pokemon, setPokemon } = useContext(mainContext)
+    const { pokemonId, setPokemonId, pokemon, setPokemon, darkMode, setDarkmode } = useContext(mainContext)
     setPokemonId(id)
     console.log(pokemon);
     const [hidden, setHidden] = useState(true);

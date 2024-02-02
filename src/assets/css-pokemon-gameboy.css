@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .framed {
   position: relative;
-  border-image: url("./images/frame-hd.png") 42 round;
+  border-image: var(--frame-bg-hd);
   border-width: 21px;
   border-style: solid;
   padding: 1em;
@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   max-width: 100%; }
   .framed.no-hd {
-    border-image: url("./images/frame.png") 7 round;
+    border-image: var(--frame-bg);
     border-width: 7px; }
   .framed.neutral {
     background: #F8F3F8;
@@ -1749,8 +1749,6 @@ body {
   font-smooth: never;
   -webkit-font-smoothing: none;
   min-width: 320px;
-  background: #F8F3F8;
-  color: #181010;
   image-rendering: pixelated; }
 
 h1, h2, h3, h4, h5, h6 {

@@ -2,7 +2,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em;
+    gap: 2em;
     input {
         text-align: center;
         text-transform: lowercase;
@@ -13,8 +13,11 @@ header {
         font-family: "Pokemon GB";
     }
 
-    img {
+    #logo {
         width: 500px;
+    }
+    #darkmode-icon{
+        width: 75px;
     }
 }
 
