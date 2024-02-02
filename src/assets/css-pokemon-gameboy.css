@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   max-width: 100%; }
   .framed.no-hd {
-    border-image: var(--frame-bg);
+    border-image: var(--frame-bg) !important;
     border-width: 7px; }
   .framed.neutral {
     background: #F8F3F8;
@@ -79,7 +79,7 @@ a.button, a.button:hover, a.button:active {
   color: #181010;
   text-decoration: none; }
 
-button, .button {
+.button {
   position: relative;
   font-family: "Pokemon GB";
   font-size: 1em;
@@ -89,7 +89,7 @@ button, .button {
   text-transform: uppercase;
   text-align: left;
   cursor: pointer; }
-  button:hover::before, .button:hover::before {
+.button:hover::before {
     content: "";
     position: absolute;
     top: 0;

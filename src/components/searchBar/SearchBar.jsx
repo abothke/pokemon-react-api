@@ -15,14 +15,15 @@ const SearchBar = () => {
     }
     }
     return (
-    <>
-    <input className='framed no-hd'
+    <div className='framed no-hd searchBar'>
+    <input
+    style={{width:"100%"}}
     type="text"
     ref={pokemonRef}
     onChange={pokemonSearch}
     placeholder='search for a pokemon'
     />
-    </>
+    </div>
     )
 }
 

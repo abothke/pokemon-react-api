@@ -3,9 +3,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem;
     gap: 1em;
     margin: 1rem;
+    width: 100%;
 }
 
 /* hier ist ein div mit dem gradient und dem Bild */
@@ -134,25 +134,24 @@
 
 .attacks {
     gap: 1em;
-    width: 45rem;
-    max-width: 90%;
-    margin: 0 auto;
-
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     h2 {
         cursor: pointer;
+    }
+    button{
+        text-align: center;
     }
 }
 
 .attacks ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    width: 80%;
-    align-items: center;
-    justify-content: center;
-
+    padding: 0;
     li {
         list-style-type: none;
+        width: 80%;
     }
 }
 
@@ -167,6 +166,10 @@
     max-width: 80vw;
     width: 80vw;
     margin: 0 auto;
+}
+
+.moves{
+    display: flex;
 }
 
 @media only screen and (max-width: 760px) {
@@ -188,7 +191,9 @@
     }
 
     .attacks {
-        width: 20rem;
+        button{
+            font-size: 0.75rem;
+        }
     }
 
 }

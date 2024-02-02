@@ -11,7 +11,7 @@ const List = () => {
     console.log(pokemons[0]);
     return (
         <>
-            <main>
+            <main className='framed'>
                 {pokemons[0] === undefined ? (
                     <h2>Pokemon not found</h2>
                 )
@@ -30,7 +30,7 @@ const List = () => {
                 })}
                 { pokemons.length === apiLimit ? (
                     <div className='framed'>
-                    <button onClick={() => {
+                    <button className='button' onClick={() => {
                         setApiLimit(apiLimit + 100)
                         console.log(apiLimit);
                         }}>Load more</button>

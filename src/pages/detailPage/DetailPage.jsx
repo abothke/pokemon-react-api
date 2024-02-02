@@ -33,19 +33,15 @@ const DetailPage = () => {
                             ))}
                         </div>
                         <div className="attacks">
-                            <ul className="framed buttons">
-                                <li>
-                                    <button onClick={() => {
+                                    <button className="button" onClick={() => {
                                         setHidden(!hidden)
                                     }}>Attacks and Movements</button>
-                                </li>
-                            </ul>
                             {hidden === false ? (
-                                <ul className="framed">
-                                    {pokemon?.moves?.map((move, index) => (
-                                        <li className="framed buttons" key={index}>{move.move.name}</li>
-                                    ))}
-                                </ul>
+                                    <ul>
+                                        {pokemon?.moves?.map((move, index) => (
+                                            <li className="framed buttons" key={index}>{move.move.name}</li>
+                                        ))}
+                                    </ul>
                             ) : (
                                 null
                             )}

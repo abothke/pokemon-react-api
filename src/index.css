@@ -22,7 +22,6 @@
   --color-fg: #F8F3F8;
   --frame-bg-hd: url("./assets/images/frame-hd-dark.png") 42 round;
   --frame-bg: url("./assets/images/frame-dark.png") 7 round;
-  --darkmode-icon: 
 }
 
 a {
@@ -51,5 +50,10 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
+  color: var(--color-fg);
+}
+
+.searchBar input{
+  background-color: var(--color-bg);
   color: var(--color-fg);
 }
