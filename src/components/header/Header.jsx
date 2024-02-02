@@ -5,6 +5,7 @@ import "./header.css"
 import { mainContext } from '../../assets/context/mainProvider'
 import darkmodeIcon from "../../assets/images/moon.png"
 import lightmodeIcon from "../../assets/images/sun.png"
+import { useContext } from 'react'
 
 
 const Header = () => {

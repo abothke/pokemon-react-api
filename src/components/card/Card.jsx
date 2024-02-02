@@ -13,7 +13,7 @@ const Card = ({ data }) => {
     const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/${pokemonId}.gif`;
     return (
         <>
-        // Wenn die Daten vorhanden sind, zeige das Pokémon an, andernfalls zeige "Loading..." an
+        {/* // Wenn die Daten vorhanden sind, zeige das Pokémon an, andernfalls zeige "Loading..." an */}
         { data ?(
             <Link to={`/pokemon/${pokemonId}`} className='pokemonCard'>
 
