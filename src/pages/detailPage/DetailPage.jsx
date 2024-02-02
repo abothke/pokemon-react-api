@@ -8,19 +8,24 @@ import ArrowToTop from "../../components/arrowToTop/ArrowToTop";
 
 
 const DetailPage = () => {
+    // id wird aus der URL geholt
     let { id } = useParams()
-    const { pokemonId, setPokemonId, pokemon, setPokemon, darkMode, setDarkmode } = useContext(mainContext)
+    // setPokemonId und pokemon werden aus dem Context geholt
+    const { setPokemonId, pokemon } = useContext(mainContext)
+    // setPokemonId wird auf die id gesetzt, die aus der URL geholt wurde
     setPokemonId(id)
-    console.log(pokemon);
+    // console.log(pokemon);
+    // usesState um die Liste der Pokemons zu verstecken oder anzuzeigen
     const [hidden, setHidden] = useState(true);
 
-    //falls id ist kleiner als 10 commt eine 0 vorne und acuh bei 100
+    // falls die id weniger als 3 Zeichen hat, wird die id mit Nullen aufgefüllt
     const idMitNullen = `#${id.padStart(3, '0')}`
 
     return (
     <>
         <Header />
         {
+            // Wenn pokemon vorhanden ist, dann zeige das Pokemon an, andernfalls zeige "loading" an
             pokemon ? (
                 <main className="framed">
                     <div className="detailContainer">
@@ -33,6 +38,7 @@ const DetailPage = () => {
                             ))}
                         </div>
                         <div className="attacks">
+                            {/*  Wenn hidden false ist, zeige die Liste der Angriffe und Bewegungen an, andernfalls zeige nichts an */}
                                     <button className="button" onClick={() => {
                                         setHidden(!hidden)
                                     }}>Attacks and Movements</button>
@@ -53,65 +59,13 @@ const DetailPage = () => {
                 :
                 (
                     < div className="detailContainer">
-                        <h4>... loading the pokomen <details></details></h4>
+                        <h4>... loading<details></details></h4>
                     </div>
                 )
         }
-
-
-
-        {/* {
-            findPokemon ?
-                <div>
-                    <h1>{findPokemon.name}</h1>
-
-                </div>
-                : <p>...loading</p>
-        } */}
         <ArrowToTop />
     </>
     );
 }
 
 export default DetailPage;
-
-
-
-
-// useEffect(() => {
-//     setPokemon(123)
-// }, [123])
-
-// console.log("clg", pokemon);
-
-// useEffect(() => {
-//     const filterPokemon = pokemons.filter((data) => {
-//         return data.id === Number(setPokemonId)
-//     })
-//     setPokemon(123)
-// }, [setPokemon])
-
-// console.log(filterPokemon);
-
-// const filteredPokomen = pokemons.filter((pokomensort) => {
-//     return pokomensort === Number(pokemonId)
-// })
-
-// const findPokemon = pokemons.find((pokemon) => pokemon.name === Number(pokemonId))
-
-
-
-// useEffect(() => {
-//     const filterData = datas.filter((data) => {
-//         return data.id === Number(pizza.pizza)
-//     })
-//     setProduct(filterData[0])
-// }, [pizza, datas])
-
-
-
-
-
-// console.log("aici pokemonId", pokemonId);
-// console.log("aici pokomens", pokemons);
-// console.log("aici pokomens", pokemon);

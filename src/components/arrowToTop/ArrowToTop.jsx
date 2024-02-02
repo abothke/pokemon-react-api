@@ -1,4 +1,4 @@
-import React from 'react'
+// ScrollToTop package wird verwendet um eine Scroll to Top Funktion zu implementieren
 import ScrollToTop from 'react-scroll-to-top'
 
 const ArrowToTop = () => {
